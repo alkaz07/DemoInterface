@@ -2,6 +2,7 @@ public class City extends Site{
     String name;
 
     public City(String name) {
+        super(name);
         this.name = name;
     }
 

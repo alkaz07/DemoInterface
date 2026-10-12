@@ -4,6 +4,7 @@ public class Address extends Site{
     int apartment;
 
     public Address(String street, int building, int apartment) {
+        super("");
         this.street = street;
         this.building = building;
         this.apartment = apartment;

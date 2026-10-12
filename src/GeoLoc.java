@@ -2,7 +2,8 @@ public class GeoLoc extends Site{
     double latitude;
     double longitude;
 
-    public GeoLoc(double latitude, double longitude) {
+    public GeoLoc(String alias, double latitude, double longitude) {
+        super(alias);
         this.latitude = latitude;
         this.longitude = longitude;
     }
@@ -10,10 +11,13 @@ public class GeoLoc extends Site{
     @Override
     public String toString() {
         return "GeoLoc{" +
-                "lat=" + latitude +
-                ", long=" + longitude +
+                "latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", alias='" + alias + '\'' +
                 '}';
     }
+
+
 
     @Override
     public double distanceTo(Site to) {
