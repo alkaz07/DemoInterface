@@ -12,6 +12,27 @@ public class Main{
         Site moscow = new City("Москва");
         ITravel t1 = new AirTravel();
         t1.travel(moscow, piter);
+
+        ITravel t2 = new TravelOnFoot();
+        t2.travel(piter, new Address("Ленина", 3, 15));
+
+        ITravel t3 = new ITravel() {
+            @Override
+            public void setup(Site from) {
+                System.out.println("Магическая формула");
+            }
+
+            @Override
+            public void relax(Site to) {
+                System.out.println("Развеять остаточную магию");
+            }
+
+            @Override
+            public void move(Site from, Site to) {
+                System.out.println("Портальное перемещение из "+from+" в "+to);
+            }
+        };
+        t3.travel(piter, new City("Авалон"));
     }
 
     private static void exemple1() {
