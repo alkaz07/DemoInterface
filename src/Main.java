@@ -3,7 +3,15 @@
 public class Main{
     public static void main(String[] args) {
 //        exemple0();
-        exemple1();
+//        exemple1();
+            exemple2();
+    }
+
+    private static void exemple2() {
+        Site piter = new City("Питер");
+        Site moscow = new City("Москва");
+        ITravel t1 = new AirTravel();
+        t1.travel(moscow, piter);
     }
 
     private static void exemple1() {
