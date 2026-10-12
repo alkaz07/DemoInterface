@@ -4,6 +4,10 @@ public class Main{
     public static void main(String[] args) {
             Site a = new GeoLoc(60, 30);
             Site b = new GeoLoc(62, 29);
-            System.out.println(a.distanceTo(b));
+            System.out.println("Расстояние от " +a +" до "+b+" равно " + a.distanceTo(b));
+            Site c = new City("Питер");
+            Site d = new City("Москва");
+            System.out.println("Расстояние от " +c +" до "+d+" равно " + c.distanceTo(d));
+            System.out.println("Расстояние от " +a +" до "+d+" равно " + a.distanceTo(d));
         }
 }
